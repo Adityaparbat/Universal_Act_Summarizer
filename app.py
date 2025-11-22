@@ -117,7 +117,7 @@ def run_analysis():
         rules_raw = asyncio.run(async_qa_gemini(rule_check_prompt, retriever, chat_history))
     else:
         if not OPENAI_API_KEY:
-            st.error("❌ OPENAI_API_KEY missing in .env file")
+            st.error("OPENAI_API_KEY missing in .env file")
             return None, None, None, None
         summary = sync_qa_openai(summary_prompt, retriever, chat_history)
         extraction_raw = sync_qa_openai(extraction_prompt, retriever, chat_history)
