@@ -19,7 +19,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 PDF_PATH = "ukpga_20250022_en.pdf"
 
-st.title("📘 Universal Credit Act 2025 AI Analysis")
+st.title("Universal Credit Act 2025 AI Analysis")
 
 @st.cache_data(show_spinner=True)
 def extract_full_text(pdf_path):
@@ -175,4 +175,4 @@ if st.button("Run Full Act Analysis"):
         st.markdown("## Task 4: Rule Checks JSON")
         st.json(rule_checks)
 
-        st.success("✅ Final JSON report saved as universal_credit_act_2025_report.json")
+        st.success("Final JSON report saved as universal_credit_act_2025_report.json")
